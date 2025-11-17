@@ -73,19 +73,6 @@
 					"run": "rustup target add wasm32-unknown-unknown"
 				},
 				{
-					"name": "macOS: 安装 LLVM 和 Clang",
-					"uses": "KyleMayes/install-llvm-action@v2",
-					"if": "matrix.platform == 'macos-latest'",
-					"with": {
-						"version": "15"
-					}
-				},
-				{
-					"name": "安装 Tauri 所需系统依赖（仅 Linux）",
-					"if": "matrix.platform == 'ubuntu-22.04'",
-					"run": "sudo apt-get update\nsudo apt-get install -y libasound2-dev libappindicator3-dev libwebkit2gtk-4.0-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf\n"
-				},
-				{
 					"name": "安装前端依赖",
 					"run": "pnpm i"
 				},
