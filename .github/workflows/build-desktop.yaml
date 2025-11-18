@@ -36,15 +36,11 @@ jobs:
         with:
           path: >
             ~/.cargo/bin/
-
             ~/.cargo/registry/index/
-
             ~/.cargo/registry/cache/
-
             ~/.cargo/git/db/
-
             target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-v2
       - name: PNPMをインストール
         uses: pnpm/action-setup@v4.0.0
       - name: Node.js をインストール
