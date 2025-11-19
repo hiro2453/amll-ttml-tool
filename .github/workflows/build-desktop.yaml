@@ -48,8 +48,6 @@ jobs:
         run: pnpm install
       - name: フロントエンド構築
         run: pnpm build
-      - name: ビルド
-        run: cargo tauri build
       - name: AMLL TTML Tools プログラムを構築し、自動ビルドを公開する
         uses: tauri-apps/tauri-action@v0.5.15
         with:
