@@ -1,8 +1,5 @@
 {
 	"app": {
-		"loadingEditPage": "Loading Edit Page",
-		"loadingSyncPage": "Loading Sync Page",
-		"loadingAMLLPreviewPage": "Loading AMLL Lyrics Preview Page",
 		"error": {
 			"title": "Oops, an error occurred!",
 			"description": "An error occurred while running AMLL TTML Tools",
@@ -19,79 +16,18 @@
 			"description": "Add new lyric lines in the top panel or open/import existing lyrics from the menu"
 		}
 	},
-	"topBar": {
-		"menu": {
-			"tools": {
-				"loadingJieba": "Loading Jieba tokenizer module",
-				"processing": "Tokenizing, please wait…",
-				"completed": "Tokenization complete!",
-				"error": "Tokenization failed, please check console errors!"
-			},
-			"file": "ファイル",
-			"newLyric": "歌詞を新規作成",
-			"openLyric": "開く",
-			"saveLyric": "保存する",
-			"importLyric": {
-				"import": "インポート",
-				"fromPlainText": "プレーンテキスト ファイル…",
-				"fromLyRiC": "LyRiC ファイル…",
-				"fromESLyRiC": "ESLyRiC ファイル…",
-				"fromQRC": "QRC ファイル…",
-				"fromYRC": "YRC ファイル…",
-				"fromLrcfySylb": "Lyricify Syllable ファイル…"
-			},
-			"exportLyric": {
-				"export": "エクスポート",
-				"toPlainText": "プレーンテキスト ファイル…",
-				"toLyRiC": "LyRiC ファイル…",
-				"toESLyRiC": "ESLyRiC ファイル…",
-				"toQRC": "QRC ファイル…",
-				"toYRC": "YRC ファイル…",
-				"toLrcfySylb": "Lyricify Syllable ファイル…",
-				"toASS": "ASS字幕 ファイル…"
-			},
-			"uploadToAMLLDB": "データベースを更新 (中国のみ)",
-			"helpDoc": "ドキュメント (中国語)",
-			"about": "情報",
-			"edit": "編集",
-			"undo": "元に戻す",
-			"redo": "やり直す",
-			"selectAllLines": "全ての行を選択",
-			"unselectAllLines": "行の選択を解除",
-			"invertSelectAllLines": "行選択を反転",
-			"showTranslatedLyricLines": "翻訳された歌詞を表示",
-			"splitWordBySimpleMethod": "単語を分割",
-			"splitWordByJieba": "単語を分割 (JieBa使用)",
-			"splitWordByCompromise": "単語を分割 (おおよそ)",
-			"view": "View",
-			"tool": "ツール",
-			"autoSegment": "自動区分",
-			"advancedSegment": "上級者向け自動区分...",
-			"segmentationTools": "区分ツール",
-			"restoreFromHistory": "履歴から復元…",
-			"openFromClipboard": "クリップボードからTTMLを開く",
-			"saveLyricToClipboard": "クリップボードにTTMLを保存",
-			"selectWordsOfMatchedSelection": "選択範囲に一致する単語を選択",
-			"editMetadata": "歌詞のメタデータ編集…",
-			"help": "ヘルプ",
-			"loadingJieba": "Jieba トークナイザーモジュールの読み込み中",
-			"processing": "トークン化しています。お待ちください…",
-			"completed": "トークン化に成功しました！",
-			"error": "トークン化に失敗しました。コンソールのログを確認してください"
+	"historyRestoreDialog": {
+		"confirm": {
+			"title": "Confirm Restore",
+			"description": "This will overwrite all content in the current editor. Are you sure you want to restore this snapshot?"
 		},
-		"modeBtns": {
-			"edit": "編集",
-			"sync": "タイミング",
-			"preview": "プレビュー"
-		},
-		"appName": "Apple Music-like Lyrics TTML Tool"
-	},
-	"aboutModal": {
-		"appName": "Apple Music-like Lyrics TTML Tool",
-		"description": "A Word-by-Word TTML Editing and Timeline Tool for Apple Music-like Lyrics",
-		"githubBtn": "Github",
-		"buildDate": "Build Date: {date}",
-		"gitCommit": "Git Commit: {commit}"
+		"deleteFailed": "删除快照失败",
+		"title": "从历史记录恢复",
+		"description": "选择一个自动保存的快照进行恢复",
+		"tableHeader": "保存时间",
+		"restoreButton": "恢复",
+		"noHistory": "没有可用的历史记录",
+		"cancelButton": "取消"
 	},
 	"metadataDialog": {
 		"title": "メタデータ エディター",
@@ -123,6 +59,60 @@
 			"ttmlAuthorGithubLogin": "歌詞作成者のGitHub Username",
 			"ttmlAuthorGithubLoginInvalidMsg": "GitHubのユーザー名は英数字またはハイフンで構成され、最大39文字までとします"
 		}
+	},
+	"aboutModal": {
+		"appName": "Apple Music-like lyrics TTML Tools",
+		"description": "一个用于 Apple Music-like lyrics 生态的逐词歌词 TTML 编辑和时间轴工具",
+		"buildDate": "构建日期：{date}",
+		"gitCommit": "Git 提交：{commit}"
+	},
+	"settings": {
+		"common": {
+			"language": "Interface Language",
+			"languageDesc": "Select the language for the interface",
+			"layoutMode": "Editor Layout Mode",
+			"layoutModeDesc": {
+				"line1": "Simple layout satisfies most basic needs",
+				"line2": "Switch to Advanced Mode if you need more efficient syncing"
+			},
+			"layoutModeOptions": {
+				"simple": "Simple Mode",
+				"advance": "Advanced Mode"
+			},
+			"syncJudgeMode": "Sync Timestamp Judgment Mode",
+			"syncJudgeModeDesc": "Set how timestamps are judged when syncing. Default is 'First key down'.",
+			"syncJudgeModeOptions": {
+				"firstKeyDown": "First key down time",
+				"firstKeyDownLegacy": "First key down time (legacy)",
+				"lastKeyUp": "Last key up time",
+				"middleKey": "Middle of key down & up"
+			},
+			"autosave": {
+				"enable": "启用自动保存",
+				"interval": "保存间隔 (分钟)",
+				"limit": "保留快照数量"
+			},
+			"volume": "Music Volume",
+			"playbackRate": "Playback Speed"
+		},
+		"spectrogram": {
+			"palette": "Color Palette",
+			"paletteCustom": "Custom",
+			"gradientEditorDesc": "A Pos value of 0.0 corresponds to the quietest part, and 1.0 corresponds to the loudest part. It is recommended to use brighter colors for larger Pos values.",
+			"addStop": "Add Color Stop"
+		},
+		"experimental": {
+			"perWordRomanization": "Enable Per-Word Romanization"
+		}
+	},
+	"audioPanel": {
+		"volume": "Volume",
+		"gain": "Spectrum Gain",
+		"playbackRate": "Playback rate",
+		"clickToLoadMusic": "Click the icon button to load music",
+		"playPause": "Play / pause music",
+		"expandSpectrogram": "Expand / collapse spectrogram",
+		"waitForSpectrogram": "Waiting for spectrogram to load…"
 	},
 	"settingsDialog": {
 		"title": "環境設定",
@@ -168,7 +158,7 @@
 			"auditionSelectionAfter": "Spectrogram - オーディション選択（500ms後）"
 		},
 		"common": {
-			"latencyTest": "Audio/input latency test"
+			"latencyTest": "遅延テスト"
 		}
 	},
 	"textImportDialog": {
@@ -189,163 +179,31 @@
 		"separator": "区切りの文字",
 		"swapTransAndRoman": "翻訳とローマ字表記の行を入れ替える",
 		"wordSeparator": "単語区切り記号",
-		"enableSpecialPrefix": "Enable Special Prefix",
-		"bgLyricPrefix": "Background Lyric Prefix",
-		"duetLyricPrefix": "Duet Lyric Prefix",
-		"enableEmptyBeat": "Enable Empty Beat",
-		"emptyBeatSymbol": "Empty Beat Symbol"
+		"enableSpecialPrefix": "特別な区切り記号を使用する",
+		"bgLyricPrefix": "前の文字",
+		"duetLyricPrefix": "後ろの文字",
+		"enableEmptyBeat": "空のビートを有効にする",
+		"emptyBeatSymbol": "空ビートの文字"
 	},
 	"common": {
-		"about": "About",
+		"about": "情報",
 		"fileNamePlaceholder": "File Name",
 		"remove": "削除",
 		"cancel": "キャンセル",
 		"apply": "適用"
 	},
 	"splitWordDialog": {
-		"title": "Split/Replace Word",
-		"tip": "After splitting, new words will evenly divide the original word's start/end time. Empty beats will be cleared.",
-		"originalWord": "Split/Replace Template",
-		"delimiter": "Delimiter",
-		"previewTitle": "Split Preview",
-		"spaceCount": "Space x{count}",
-		"empty": "Empty",
-		"actionButton": "Confirm",
-		"applyToAll": "Apply this splitting/replacing to all identical words"
-	},
-	"lyricLineView": {
-		"translatedLabel": "Translation:",
-		"romanLabel": "Romanization:",
-		"empty": "None",
-		"insertWord": "Insert word here…",
-		"insertLine": "Insert new line here"
-	},
-	"contextMenu": {
-		"splitReplaceWord": "Split or replace word…",
-		"combineWords": "Combine words",
-		"deleteWords": "Delete {count, plural, one {word} other {words}}",
-		"moveFollowingWordToNewLine": "Move followings to new line",
-		"moveWordToNewLine": "Move {count, plural, one {word} other {words}} to new line",
-		"bgLyric": "Background line",
-		"duetLyric": "Duet line",
-		"insertLineBefore": "Insert new line before",
-		"insertLineAfter": "Insert new line after",
-		"copyLine": "Duplicate {count, plural, one {line} other {lines}}",
-		"combineLine": "Combine lines",
-		"deleteLine": "Delete {count, plural, one {line} other {lines}}"
-	},
-	"lyricWordEditor": {
-		"empty": "Blank",
-		"space": "Space x{0}"
-	},
-	"lyricWordView": {
-		"empty": "Empty",
-		"spaceCount": "Space x{count}"
-	},
-	"ribbonBar": {
-		"loading": "Panel loading…",
-		"editMode": {
-			"new": "New",
-			"lyricLine": "Lyric Line",
-			"timing": "Line Timing",
-			"lineTiming": "Line Timing",
-			"startTime": "Start Time",
-			"endTime": "End Time",
-			"lineProperties": "Line Properties",
-			"bgLyric": "Background Vocal",
-			"duetLyric": "Duet Vocal",
-			"ignoreSync": "Ignore Sync",
-			"wordTiming": "Word Timing",
-			"wordProperties": "Word Properties",
-			"word": "Word",
-			"emptyBeatCount": "Empty Beat Count",
-			"secondaryContent": "Secondary Content",
-			"translatedLyric": "Translation",
-			"romanLyric": "Romanization",
-			"multipleValues": "Multiple values…",
-			"wordContent": "Word Content",
-			"obscene": "Obscene",
-			"layoutMode": "Layout",
-			"syllableDisplayMode": "Syllable Display Mode",
-			"lineMode": "Line Mode",
-			"syllableMode": "Syllable Mode",
-			"showAllSyllables": "Show All Syllables",
-			"layoutModeOptions": {
-				"simple": "Simple Mode",
-				"advance": "Advanced Mode"
-			}
-		},
-		"syncMode": {
-			"currentEmptyBeat": "Empty Beat",
-			"syncAdjustment": "Timing Adjustment",
-			"timeOffset": "Time Offset",
-			"assistSettings": "Assistant Settings",
-			"showTimestampUpdate": "Show Timestamp Updates",
-			"touchSyncPanel": "Touch Sync Panel",
-			"keyBindingReference": "Hotkey Cheatsheet",
-			"startSync": "Mark Begin",
-			"continuousSync": "Commit",
-			"endSync": "Mark End"
-		},
-		"previewMode": {
-			"lyrics": "Lyrics",
-			"showTranslation": "Show Translation",
-			"showRoman": "Show Romanization",
-			"word": "Word",
-			"fadeWidth": "Fade Width"
-		}
-	},
-	"settings": {
-		"common": {
-			"language": "Interface Language",
-			"languageDesc": "Select the language for the interface",
-			"layoutMode": "Editor Layout Mode",
-			"layoutModeDesc": {
-				"line1": "Simple layout satisfies most basic needs",
-				"line2": "Switch to Advanced Mode if you need more efficient syncing"
-			},
-			"layoutModeOptions": {
-				"simple": "Simple Mode",
-				"advance": "Advanced Mode"
-			},
-			"syncJudgeMode": "Sync Timestamp Judgment Mode",
-			"syncJudgeModeDesc": "Set how timestamps are judged when syncing. Default is 'First key down'.",
-			"syncJudgeModeOptions": {
-				"firstKeyDown": "First key down time",
-				"firstKeyDownLegacy": "First key down time (legacy)",
-				"lastKeyUp": "Last key up time",
-				"middleKey": "Middle of key down & up"
-			},
-			"volume": "Music Volume",
-			"playbackRate": "Playback Speed",
-			"autosave": {
-				"title": "Autosave",
-				"enable": "Enable Autosave",
-				"interval": "Save Interval (minutes)",
-				"limit": "Snapshots to keep"
-			}
-		},
-		"spectrogram": {
-			"palette": "Color Palette",
-			"paletteCustom": "Custom",
-			"gradientEditorDesc": "A Pos value of 0.0 corresponds to the quietest part, and 1.0 corresponds to the loudest part. It is recommended to use brighter colors for larger Pos values.",
-			"addStop": "Add Color Stop"
-		},
-		"experimental": {
-			"perWordRomanization": "Enable Per-Word Romanization"
-		}
-	},
-	"audioPanel": {
-		"volume": "Volume",
-		"gain": "Spectrum Gain",
-		"playbackRate": "Playback rate",
-		"clickToLoadMusic": "Click the icon button to load music",
-		"playPause": "Play / pause music",
-		"expandSpectrogram": "Expand / collapse spectrogram",
-		"waitForSpectrogram": "Waiting for spectrogram to load…"
+		"title": "単語の分割/置換",
+		"tip": "分割後、新しい単語は元の単語の開始/終了時間を均等に分割します。空のビートは削除されます。",
+		"originalWord": "分割/置換のテンプレート",
+		"delimiter": "区切り記号",
+		"previewTitle": "分割プレビュー",
+		"spaceCount": "スペース x{count}",
+		"empty": "空",
+		"actionButton": "適用",
+		"applyToAll": "この分割/置換を同一の単語すべてに適用する"
 	},
 	"submitToAMLLDB": {
-		"closeWarning": "Close warning message",
 		"validation": {
 			"missingMusicName": "Metadata missing track name",
 			"missingArtists": "Metadata missing track artists",
@@ -374,7 +232,130 @@
 		"andSubmit": "and submit to the lyrics database!",
 		"futureUse": "And the lyrics will be used as default TTML source by AMLL systems in the future!",
 		"rightsWarning": "If you value retaining ownership, please do NOT submit!",
-		"submitInstructions": "Enter the following info then jump to the GitHub issue submission page!"
+		"submitInstructions": "Enter the following info then jump to the GitHub issue submission page!",
+		"closeWarning": "关闭上述警告信息"
+	},
+	"lyricLineView": {
+		"translatedLabel": "翻訳:",
+		"romanLabel": "ローマ字:",
+		"empty": "未設定",
+		"insertWord": "ここに単語を入力",
+		"insertLine": "Insert new line here"
+	},
+	"lyricWordView": {
+		"empty": "Empty",
+		"spaceCount": "Space x{count}"
+	},
+	"ribbonBar": {
+		"loading": "Panel loading…",
+		"editMode": {
+			"multipleValues": "多个值…",
+			"new": "新建",
+			"lyricLine": "歌词行",
+			"lineTiming": "行时间戳",
+			"startTime": "起始时间",
+			"endTime": "结束时间",
+			"lineProperties": "行属性",
+			"bgLyric": "背景歌词",
+			"duetLyric": "对唱歌词",
+			"ignoreSync": "忽略打轴",
+			"wordTiming": "词时间戳",
+			"emptyBeatCount": "空拍数量",
+			"wordProperties": "单词属性",
+			"wordContent": "单词内容",
+			"obscene": "不雅用语",
+			"secondaryContent": "次要内容",
+			"translatedLyric": "翻译歌词",
+			"romanLyric": "音译歌词",
+			"layoutMode": "布局模式",
+			"syllableDisplayMode": "音节显示模式",
+			"lineMode": "逐行模式",
+			"syllableMode": "逐字模式",
+			"showAllSyllables": "显示所有音节",
+			"layoutModeOptions": {
+				"simple": "简单模式",
+				"advance": "高级模式"
+			}
+		},
+		"previewMode": {
+			"lyrics": "歌词",
+			"showTranslation": "显示翻译",
+			"showRoman": "显示音译",
+			"word": "单词",
+			"fadeWidth": "过渡宽度"
+		},
+		"syncMode": {
+			"currentEmptyBeat": "Empty Beat",
+			"syncAdjustment": "Timing Adjustment",
+			"timeOffset": "Time Offset",
+			"assistSettings": "Assistant Settings",
+			"showTimestampUpdate": "Show Timestamp Updates",
+			"touchSyncPanel": "Touch Sync Panel",
+			"keyBindingReference": "Hotkey Cheatsheet",
+			"startSync": "Mark Begin",
+			"continuousSync": "Commit",
+			"endSync": "Mark End"
+		}
+	},
+	"topBar": {
+		"modeBtns": {
+			"edit": "编辑",
+			"sync": "打轴",
+			"preview": "预览"
+		},
+		"appName": "Apple Music-like Lyrics TTML Tool",
+		"menu": {
+			"tools": {
+				"loadingJieba": "Loading Jieba tokenizer module",
+				"processing": "Tokenizing, please wait…",
+				"completed": "Tokenization complete!",
+				"error": "Tokenization failed, please check console errors!"
+			},
+			"file": "ファイル",
+			"newLyric": "歌詞を新規作成",
+			"openLyric": "開く",
+			"openFromClipboard": "クリップボードからTTMLを開く",
+			"saveLyric": "保存する",
+			"restoreFromHistory": "履歴から復元…",
+			"saveLyricToClipboard": "クリップボードにTTMLを保存",
+			"importLyric": {
+				"import": "インポート",
+				"fromPlainText": "プレーンテキスト ファイル…",
+				"fromLyRiC": "LyRiC ファイル…",
+				"fromESLyRiC": "ESLyRiC ファイル…",
+				"fromQRC": "QRC ファイル…",
+				"fromYRC": "YRC ファイル…",
+				"fromLrcfySylb": "Lyricify Syllable ファイル…"
+			},
+			"exportLyric": {
+				"export": "エクスポート",
+				"toPlainText": "プレーンテキスト ファイル…",
+				"toLyRiC": "LyRiC ファイル…",
+				"toESLyRiC": "ESLyRiC ファイル…",
+				"toQRC": "QRC ファイル…",
+				"toYRC": "YRC ファイル…",
+				"toLrcfySylb": "Lyricify Syllable ファイル…",
+				"toASS": "ASS字幕 ファイル…"
+			},
+			"uploadToAMLLDB": "データベースを更新 (中国のみ)",
+			"edit": "編集",
+			"undo": "元に戻す",
+			"redo": "やり直す",
+			"selectAllLines": "全ての行を選択",
+			"unselectAllLines": "行の選択を解除",
+			"invertSelectAllLines": "行選択を反転",
+			"selectWordsOfMatchedSelection": "選択範囲に一致する単語を選択",
+			"editMetadata": "歌詞のメタデータ編集…",
+			"tool": "ツール",
+			"splitWordBySimpleMethod": "使用简单方式对歌词行分词",
+			"splitWordByJieba": "使用 JieBa 对歌词行分词",
+			"splitWordByCompromise": "使用 Compromise 对歌词行分词",
+			"autoSegment": "自動区分",
+			"advancedSegment": "上級者向け自動区分...",
+			"segmentationTools": "区分ツール",
+			"help": "ヘルプ",
+			"helpDoc": "使い方"
+		}
 	},
 	"confirmDialog": {
 		"newFile": {
@@ -440,18 +421,19 @@
 			"outputError": "Splitting preview error"
 		}
 	},
-	"historyRestoreDialog": {
-		"title": "Restore from History",
-		"description": "Select an autosaved snapshot to restore.",
-		"tableHeader": "Save Time",
-		"restoreButton": "Restore",
-		"noHistory": "No history available",
-		"confirm": {
-			"title": "Confirm Restore",
-			"description": "This will overwrite all content in the current editor. Are you sure you want to restore this snapshot?"
-		},
-		"cancelButton": "Cancel",
-		"deleteFailed": "Failed to delete snapshot"
+	"contextMenu": {
+		"splitReplaceWord": "Split or replace word…",
+		"combineWords": "Combine words",
+		"deleteWords": "Delete {count, plural, one {word} other {words}}",
+		"moveFollowingWordToNewLine": "Move followings to new line",
+		"moveWordToNewLine": "Move {count, plural, one {word} other {words}} to new line",
+		"bgLyric": "Background line",
+		"duetLyric": "Duet line",
+		"insertLineBefore": "Insert new line before",
+		"insertLineAfter": "Insert new line after",
+		"copyLine": "Duplicate {count, plural, one {line} other {lines}}",
+		"combineLine": "Combine lines",
+		"deleteLine": "Delete {count, plural, one {line} other {lines}}"
 	},
 	"touchSyncPanel": {
 		"prevWord": "Jump Previous Word",
