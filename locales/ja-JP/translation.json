@@ -198,9 +198,9 @@
 	"common": {
 		"about": "About",
 		"fileNamePlaceholder": "File Name",
-		"remove": "Remove",
-		"cancel": "Cancel",
-		"apply": "Apply"
+		"remove": "削除",
+		"cancel": "キャンセル",
+		"apply": "適用"
 	},
 	"splitWordDialog": {
 		"title": "Split/Replace Word",
