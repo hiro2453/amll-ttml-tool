@@ -44,8 +44,6 @@ jobs:
           targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
       - name: wasm32 ターゲットのインストール
         run: rustup target add wasm32-unknown-unknown
-      - name: なにこれ
-        run: cargo clean
       - name: フロントエンド依存関係をインストールする
         run: pnpm install
       - name: フロントエンド構築
